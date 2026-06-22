@@ -1,8 +1,252 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+body {
+    background-color: #050505;
+    color: white;
+    font-family: Arial,  sans-serif;
+}
+/* Header */
+.header {
+    background-color: #0d1117;
+    border-bottom: 2px solid #00d9c0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.name h2 {
+  font-family: 'Cinzel', serif;
+    color: #00d9c0;
+    font-size: 24px;
+}
+
+.name p {
+    color: #b8ffff;
+    font-size: 14px;
+}
+
+.nav-links a {
+  font-family: 'Michroma', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-links a:hover {
+    color: #00d9c0;
+}
+/* Main */
+main {
+    min-height: 80vh;
+    padding: 60px;
+}
+/* Footer */
+.footer {
+    background-color: #111111;
+    border-top: 2px solid #00d9c0;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer h3 {
+  font-family: 'Cinzel', serif;
+    color: #00d9c0;
+}
+
+.footer p {
+  font-family: 'bodoni moda sc', serif;
+    margin: 10px 0;
+}
+
+.footer-links a {
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #00d9c0;
+}
+.home-section {
+    padding-top: 80px;
+}
+/* home */
+.welcome-text {
+    color: #00d9c0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.home-section h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.home-section h2 {
+  font-family: 'Bodoni Moda SC', serif;
+    color: #b8ffff;
+    margin-bottom: 20px;
+}
+
+.home-info {
+  font-family: 'novasquare', serif;
+    max-width: 650px;
+    color: #dddddd;
+    margin-bottom: 30px;
+}
+
+.button {
+  font-family: 'Michroma', sans-serif;
+    background-color: #00d9c0;
+    color: black;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #b8ffff;
+}
+ul {
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+li {
+  font-family: 'novasquare', serif;
+    margin-bottom: 8px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+    color: #00d9c0;
+    margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+    color: #00fff0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+  font-family: 'novasquare', serif;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.prosection {
+    padding: 120px 80px;
+    min-height: 100vh;
+}
+
+.page-title {
+  font-family: 'Cinzel', serif;
+    color: #00d9c0;
+    font-size: 50px;
+    margin-bottom: 40px;
+    font-family: 'Nova Square', sans-serif;
+}
+
+.projectcont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project {
+    background-color: #07111d;
+    border: 1px solid #00d9c0;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 150px;
+    box-shadow: 0 0 10px rgba(0, 217, 192, 0.15);
+    transition: 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 15px rgba(0, 217, 192, 0.4),
+        0 0 25px rgba(0, 217, 192, 0.2);
+}
+
+.project h3 {
+  font-family: 'Cinzel', serif;
+    color: #00d9c0;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.project p {
+  font-family: 'novasquare', serif;
+    color: #d7ffff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.contact {
+    text-align: center;
+}
+
+.contact h1 {
+    color: #00d9c0;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #0d1117;
+    border: 1px solid #00d9c0;
+    border-radius: 10px;
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 25px;
+}
+
+.box h3 {
+  font-family: 'Cinzel', serif;
+    color: #00fff0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.box a {
+  font-family: 'Michroma', sans-serif;
+    color: #e6ffff;
+    text-decoration: none;
+}
+
+.box a:hover {
+    color: #00fff0;
+}
+@media screen and (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 30px;
+    }
 }
