@@ -1,8 +1,63 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #F8F9FA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.custom-navbar {
+    background-color: #021526;
+}
+.navbar-brand {
+    color: white !important;
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-link {
+    color: white !important;
+    margin-left: 15px;
+}
+.nav-link:hover {
+    color: #6EACDA !important;
 }
 
-a {
-  color: #00B7FF;
+.display-4 {
+    color: #03346E;
+    font-weight: bold;
+
+}
+.lead {
+    color: #555;
+}
+
+.btn-custom {
+    background-color: #6EACDA;
+    color: white;
+    border: none;
+}
+.btn-custom:hover {
+    background-color: #03346E;
+    color: white;
+}
+.custom-card {
+    background-color: #E2E2B6;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.custom-footer {
+    background-color: #021526;
+    color: white;
+
+}
+.custom-footer p,
+
+.custom-footer small {
+    margin: 0;
+}
+
+table th {
+    background-color: #03346E;
+    color: white;
+}
+table td {
+    vertical-align: middle;
 }
