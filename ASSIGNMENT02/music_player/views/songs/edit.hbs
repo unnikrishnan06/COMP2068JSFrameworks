@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4"> Edit Song </h2>  
+    <form action="/songs/edit/{{song._id}}" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" value="{{song.title}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Artist</label>
+            <input type="text" class="form-control" name="artist" value="{{song.artist}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">>Album</label>
+            <input type="text" class="form-control" name="album" value="{{song.album}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Genre</label>
+            <input type="text" class="form-control" name="genre" value="{{song.genre}}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Year</label>
+            <input type="number" class="form-control" name="year" value="{{song.year}}">
+        </div>
+       <button class="btn btn-warning w-100">
+            Update Song
+        </button>
+    </form>
+</div>

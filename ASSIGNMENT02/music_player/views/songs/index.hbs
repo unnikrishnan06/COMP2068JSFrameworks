@@ -1,4 +1,40 @@
 <div class="container mt-5">
-    <h1>{{title}}</h1>
-    <p>Welcome to the Songs page.</p>
+    <h2>Music Playlist</h2>
+    <a href="/songs/add" class="btn btn-primary mb-3">
+        Add Song
+    </a>
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Genre</th>
+                <th>Year</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each songs}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{artist}}</td>
+                <td>{{album}}</td>
+                <td>{{genre}}</td>
+                <td>{{year}}</td>
+
+                <td class="text-center">
+                    <a href="/songs/edit/{{_id}}" class="btn btn-warning btn-sm">
+                        Edit
+                    </a>
+                    <a href="/songs/delete/{{_id}}"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Delete this song?')">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
 </div>

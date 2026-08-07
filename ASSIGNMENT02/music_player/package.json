@@ -13,6 +13,7 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "mongoose": "^9.9.1",
+    "mongoose-fuzzy-searching": "^2.0.2",
     "morgan": "~1.9.1"
   }
 }

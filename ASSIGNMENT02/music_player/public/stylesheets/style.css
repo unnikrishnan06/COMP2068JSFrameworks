@@ -1,14 +1,26 @@
+html,
+body{
+    height: 100%;
+}
 body {
-    background-color: #F8F9FA;
+    background-color: #F5F7FA;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex:1;
+
 }
 .custom-navbar {
     background-color: #021526;
 }
 .navbar-brand {
     color: white !important;
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
     font-size: 24px;
-    font-weight: bold;
 }
 .nav-link {
     color: white !important;
@@ -17,47 +29,88 @@ body {
 .nav-link:hover {
     color: #6EACDA !important;
 }
-
 .display-4 {
+    font-family: "Aboreto", system-ui;
+    font-weight: 400;
+    font-style: normal;
     color: #03346E;
     font-weight: bold;
-
 }
 .lead {
     color: #555;
 }
-
 .btn-custom {
     background-color: #6EACDA;
     color: white;
     border: none;
+    border-radius: 8px;
 }
 .btn-custom:hover {
     background-color: #03346E;
     color: white;
 }
+.btn-success {
+    background-color: #03346E;
+    border: none;
+    border-radius: 8px;
+}
+.btn-success:hover {
+    background-color: #021526;
+}
+.btn-warning {
+    color: white;
+    border-radius: 8px;
+}
+.btn-danger {
+    border-radius: 8px;
+}
 .custom-card {
     background-color: #E2E2B6;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
-
+}
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.table th {
+    background-color: #03346E;
+    color: white;
+    text-align: center;
+}
+.table td {
+    vertical-align: middle;
+}
+.table-hover tbody tr:hover {
+    background-color: #E2E2B6;
+}
+.form-control {
+    border-radius: 8px;
+}
+.form-control:focus {
+    border-color: #6EACDA;
+    box-shadow: 0 0 5px rgba(110, 172, 218, 0.5);
+}
+h2 {
+    color: #03346E;
+    font-weight: bold;
+}
+.text-muted {
+    font-size: 16px;
 }
 .custom-footer {
     background-color: #021526;
     color: white;
-
+    padding: 20px 0;
+    margin-top: 40px;
 }
 .custom-footer p,
-
 .custom-footer small {
     margin: 0;
-}
-
-table th {
-    background-color: #03346E;
-    color: white;
-}
-table td {
-    vertical-align: middle;
 }
