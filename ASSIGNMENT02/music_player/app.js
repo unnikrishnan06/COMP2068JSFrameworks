@@ -13,6 +13,7 @@ const session = require("express-session");
 const passport = require("./config/passport");
 const flash = require("connect-flash");
 var app = express();
+app.set("trust proxy", 1);
 connectDB();
 
 // view engine setup
