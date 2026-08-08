@@ -8,6 +8,10 @@ const hbs = require("hbs");
 const connectDB = require("./config/database");
 var indexRouter = require('./routes/index');
 const songsRouter = require("./routes/songs");
+const usersRouter = require("./routes/users");
+const session = require("express-session");
+const passport = require("./config/passport");
+const flash = require("connect-flash");
 var app = express();
 connectDB();
 
@@ -19,10 +23,24 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({
+    secret: "musicplayer",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function(req, res, next) {
+    console.log("User:", req.user);
+    res.locals.user = req.user;
+    next();
+});
+app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use("/songs", songsRouter);
+app.use("/users", usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

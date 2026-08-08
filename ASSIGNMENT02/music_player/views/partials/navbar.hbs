@@ -26,19 +26,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/songs">Songs</a>
                 </li>
+                    {{#if user}}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/auth/login">Login</a>
+                <a class="nav-link" href="/users/logout">
+                Logout
+                 </a>
                 </li>
-
+                {{else}}
                 <li class="nav-item">
-                    <a class="nav-link" href="/auth/register">Register</a>
+                    <a class="nav-link" href="/users/login">
+                        Login
+                    </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/register">
+                        Register
+                    </a>
+                </li>
+                {{/if}}
             </ul>
-
         </div>
-
     </div>
-
 </nav>

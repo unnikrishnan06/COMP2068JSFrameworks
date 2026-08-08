@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card p-4 shadow">
+                <h2 class="text-center mb-4">
+                    Login
+                </h2>
+                <form action="/users/login" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Username
+                        </label>
+                        <input
+                            type="text"
+                            name="username"
+                            class="form-control"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Password
+                        </label>
+                        <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            required>
+                    </div>
+                    <button class="btn btn-success w-100">
+                        Login
+                    </button>
+                     <div class="text-center mt-3">
+                    <a href="/users/github" class="btn btn-dark">Login with GitHub</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

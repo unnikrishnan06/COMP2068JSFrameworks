@@ -1,8 +1,10 @@
 <div class="container mt-5">
     <h2>Music Playlist</h2>
+    {{#if user}}
     <a href="/songs/add" class="btn btn-primary mb-3">
         Add Song
     </a>
+    {{/if}}
     <table class="table table-hover table-striped">
         <thead>
             <tr>
@@ -22,7 +24,7 @@
                 <td>{{album}}</td>
                 <td>{{genre}}</td>
                 <td>{{year}}</td>
-
+                {{#if user}}
                 <td class="text-center">
                     <a href="/songs/edit/{{_id}}" class="btn btn-warning btn-sm">
                         Edit
@@ -32,6 +34,7 @@
                        onclick="return confirm('Delete this song?')">
                         Delete
                     </a>
+                   {{/if}}
                 </td>
             </tr>
             {{/each}}
